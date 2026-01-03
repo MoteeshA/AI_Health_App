@@ -29,7 +29,7 @@ Upload your report, ask questions in plain language, and get **clear, personaliz
 |-------------------|---------------|-------------|  
 | ![Login](screenshots/login.png) | ![Upload](screenshots/upload.png) | ![Insights](screenshots/result1.png) |  
 
-*More screenshots in the `/screenshots` folder.*  
+ 
 
 ---
 
@@ -145,7 +145,7 @@ If this project helps you, give it a **star** ⭐ on GitHub!
 
 **Moteesh Annadanam**  
 - GitHub: [@MoteeshA](https://github.com/MoteeshA)  
-- LinkedIn: [Moteesh Annadanam](https://linkedin.com/in/moteesh)  
+- LinkedIn: [Moteesh Annadanam](https://www.linkedin.com/in/moteesh-annadanam-31a265273/)  
 
 ---
 
@@ -156,4 +156,4 @@ See the [LICENSE](LICENSE) file for details.
 
 ---
 
-*Built with ❤️ using Flutter & Firebase*
+
