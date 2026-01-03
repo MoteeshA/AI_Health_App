@@ -1,149 +1,159 @@
-AI HEALTH APP (HealthiE)
-======================
+# 🩺 HealthiE - AI Health Companion  
 
-An AI-powered Flutter mobile application that helps users interpret medical reports,
-ask health-related questions, and manage health records in a simple and user-friendly way.
+*A Flutter-powered mobile app that simplifies medical reports using AI, making healthcare accessible and understandable for everyone.*  
 
-This application uses Artificial Intelligence, Firebase, and Flutter to make medical
-information easier to understand for everyone.
+---
 
+## ✨ Why HealthiE?  
+Medical reports are confusing. HealthiE changes that.  
+Upload your report, ask questions in plain language, and get **clear, personalized insights** powered by AI—all in your preferred language.
 
-FEATURES
---------
+---
 
-- Secure Google Sign-In
-- Upload Medical Reports (PDF or Image)
-- AI-based Medical Report Interpretation
-- Multi-language Support (English, Hindi, Telugu)
-- Ask AI through Chat or Voice
-- Medicine Reminders
-- Health Report History
-- Privacy-focused design
+## 🚀 Features That Matter  
 
+| Feature | Description |  
+|---------|-------------|  
+| **🔐 Secure Login** | Google Sign-In for one-tap access. |  
+| **📄 Smart Report Upload** | Upload PDFs/images; AI extracts and explains key terms. |  
+| **🧠 AI-Powered Insights** | Get simplified explanations of medical jargon. |  
+| **🗣️ Voice & Chat** | Ask health questions via text or voice (English, Hindi, Telugu). |  
+| **⏰ Medicine Reminders** | Never miss a dose with smart notifications. |  
+| **📊 Health History** | Securely store and revisit past reports. |  
 
-APP SCREENSHOTS
----------------
+---
 
-Screenshots are included in the repository under the "screenshots" folder.
+## 📸 See It in Action  
 
-- screenshots/login.png   : Login Screen
-- screenshots/home.png    : Home Dashboard
-- screenshots/upload.png  : Upload Medical Report
-- screenshots/result1.png : AI Interpretation Result
-- screenshots/result2.png : Detailed Health Explanation
+| Login & Dashboard | Report Upload | AI Insights |  
+|-------------------|---------------|-------------|  
+| ![Login](screenshots/login.png) | ![Upload](screenshots/upload.png) | ![Insights](screenshots/result1.png) |  
 
+*More screenshots in the `/screenshots` folder.*  
 
-TECH STACK
-----------
+---
 
-Frontend        : Flutter (Dart)
-Backend         : Firebase
-Authentication  : Google Sign-In
-AI Engine       : OpenAI API
-Platform        : Android (iOS ready)
+## 🛠️ Tech Stack  
 
+**Frontend:** Flutter (Dart)  
+**Backend:** Firebase (Auth, Firestore, Storage)  
+**AI/ML:** OpenAI GPT API  
+**Platforms:** Android (iOS ready)  
+**State Management:** Provider  
+**Other Tools:** HTTP, Image Picker, Firebase Messaging  
 
-GETTING STARTED
----------------
+---
 
-1. Clone the repository
+## 📦 Getting Started  
 
-   git clone https://github.com/MoteeshA/AI_Health_App.git
-   cd Health
+### 1. **Clone the Repository**  
+```bash
+git clone https://github.com/MoteeshA/AI_Health_App.git
+cd Health
+```
 
+### 2. **Install Dependencies**  
+```bash
+flutter pub get
+```
 
-2. Install dependencies
+### 3. **Set Up Firebase**  
+1. Create a Firebase project and add Android/iOS apps.  
+2. Download `google-services.json` (Android) or `GoogleService-Info.plist` (iOS).  
+3. Place them in `android/app/` or `ios/Runner/`.  
+4. **Never commit these files** (already in `.gitignore`).  
 
-   flutter pub get
+### 4. **Configure OpenAI API Key**  
+Run or build the app with:  
+```bash
+flutter run --dart-define=OPENAI_API_KEY=your_api_key_here
+```
 
+### 5. **Run the App**  
+```bash
+flutter run
+```
 
-3. Firebase Configuration (Android)
+---
 
-   - Download google-services.json from Firebase Console
-   - Place the file at:
+## 🔐 Security First  
 
-     android/app/google-services.json
+- API keys are passed via `--dart-define` and **never stored in code**.  
+- User data is encrypted and stored securely in Firebase.  
+- Google Sign-In ensures authenticated access.  
 
-   IMPORTANT:
-   This file must NOT be committed to GitHub.
-   Ensure it is listed in .gitignore.
+---
 
+## 📁 Project Structure  
 
-4. Firebase Configuration (iOS - Optional)
-
-   If running on iOS, place:
-
-   ios/Runner/GoogleService-Info.plist
-
-
-5. OpenAI API Key Setup (Secure Method)
-
-   This project does NOT store API keys in source code.
-
-   Run the app using:
-
-   flutter run --dart-define=OPENAI_API_KEY=sk-xxxxxxxx
-
-   Build release APK using:
-
-   flutter build apk --release --dart-define=OPENAI_API_KEY=sk-xxxxxxxx
-
-   API key is accessed in code using:
-
-   String.fromEnvironment('OPENAI_API_KEY');
-
-
-6. Run the application
-
-   flutter run
-
-
-SECURITY NOTES
---------------
-
-- API keys are never committed to the repository
-- Rotate any keys that were exposed previously
-- Git history can be cleaned using git-filter-repo if required
-
-
-PROJECT STRUCTURE (SIMPLIFIED)
-------------------------------
-
+```
 Health/
-|
-|-- lib/
-|   |-- screens/
-|   |-- services/
-|   |-- widgets/
-|   |-- main.dart
-|
-|-- android/
-|-- ios/
-|-- screenshots/
-|-- README.md
-|-- pubspec.yaml
+├── lib/
+│   ├── models/          # Data models (User, Report, etc.)
+│   ├── screens/         # All UI screens
+│   ├── services/        # Firebase, API, AI services
+│   ├── utils/           # Helpers & constants
+│   ├── widgets/         # Reusable UI components
+│   └── main.dart        # App entry point
+├── android/             # Android-specific files
+├── ios/                 # iOS-specific files
+├── screenshots/         # App screenshots
+├── pubspec.yaml         # Dependencies
+└── README.md            # You are here :)
+```
 
+---
 
-CURRENT STATUS
---------------
+## 🧪 Development Status  
 
-- Core features implemented
-- UI and UX improvements in progress
-- iOS build and Play Store release planned
+| Feature | Status |  
+|---------|--------|  
+| Core UI/UX | ✅ **Done** |  
+| Firebase Integration | ✅ **Done** |  
+| AI Report Analysis | ✅ **Done** |  
+| Multi-language Support | 🚧 **In Progress** |  
+| App Store Deployment | 📅 **Planned** |  
 
+---
 
-DISCLAIMER
-----------
+## 🤝 Contributing  
 
-This application does NOT replace professional medical advice.
-Always consult a certified healthcare provider before making medical decisions.
+We welcome contributions!  
+1. Fork the repository.  
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`).  
+3. Commit changes (`git commit -m 'Add AmazingFeature'`).  
+4. Push to branch (`git push origin feature/AmazingFeature`).  
+5. Open a Pull Request.  
 
+---
 
-AUTHOR
-------
+## ⚠️ Important Disclaimer  
 
-Name   : Moteesh Annadanam
-GitHub : https://github.com/MoteeshA
+> **HealthiE is an AI assistant, not a doctor.**  
+> It helps you understand medical terms but **does not provide medical advice**.  
+> Always consult a healthcare professional for diagnosis and treatment.
 
+---
 
-If you like this project, please give it a star on GitHub.
+## 🌟 Show Your Support  
+
+If this project helps you, give it a **star** ⭐ on GitHub!  
+
+---
+
+## 👨‍💻 Author  
+
+**Moteesh Annadanam**  
+- GitHub: [@MoteeshA](https://github.com/MoteeshA)  
+- LinkedIn: [Moteesh Annadanam](https://linkedin.com/in/moteesh)  
+
+---
+
+## 📄 License  
+
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+*Built with ❤️ using Flutter & Firebase*
